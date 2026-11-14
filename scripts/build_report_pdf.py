@@ -706,14 +706,19 @@ def build_report() -> Path:
             "Development can take several minutes. The final stage should only run after development creates the frozen selection manifest.",
             styles["body"],
         ),
-        Spacer(1, 0.12 * inch),
-        p("Appendix C  Interactive Colab Notebook & Code Link", styles["section"]),
+        Spacer(1, 0.10 * inch),
+        p("Appendix C  Submission Links & Artifacts", styles["section"]),
         p(
-            "The complete, self-contained, and reproducible execution notebook for this project is available on Google Colab at the following submission link:<br/>"
+            "<b>Code Link (Google Colab):</b><br/>"
             "<font color='#1a5fb4'><u><a href='https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing'>"
             "https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing"
             "</a></u></font><br/>"
-            "This notebook runs end-to-end autonomously in a standard Google Colab environment. It automatically acquires the Kaggle dataset directly, establishes the deterministic split (RNG seed 42), computes 20D teacher and 6D student features, trains and evaluates knowledge distillation models across confidence thresholds τ ∈ [0.50, 0.95], and reproduces all verified final test metrics (75.76% F1, 60.98% IoU, +2.89 pp gain, 150.28× compression ratio over 3,801,088 pixels) with zero missing file dependencies.",
+            "The self-contained notebook runs end-to-end in Google Colab, acquiring data directly, generating deterministic splits (RNG seed 42), extracting features, and reproducing all test metrics (75.76% F1, 60.98% IoU, 150.28× compression).<br/><br/>"
+            "<b>Poster Link:</b><br/>"
+            "<font color='#1a5fb4'><u><a href='https://canva.link/al2b8pyh7258iib'>"
+            "https://canva.link/al2b8pyh7258iib"
+            "</a></u></font><br/>"
+            "Interactive digital research poster presenting the asymmetric architecture, distillation results, and qualitative error analysis.",
             styles["body"],
         ),
     ]
