@@ -706,19 +706,17 @@ def build_report() -> Path:
             "Development can take several minutes. The final stage should only run after development creates the frozen selection manifest.",
             styles["body"],
         ),
-        Spacer(1, 0.10 * inch),
-        p("Appendix C  Submission Links & Artifacts", styles["section"]),
+        Spacer(1, 0.12 * inch),
+        p("Appendix C  Submission Links", styles["section"]),
         p(
-            "<b>Code Link (Google Colab):</b><br/>"
+            "<b>Code Link:</b><br/>"
             "<font color='#1a5fb4'><u><a href='https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing'>"
             "https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing"
-            "</a></u></font><br/>"
-            "The self-contained notebook runs end-to-end in Google Colab, acquiring data directly, generating deterministic splits (RNG seed 42), extracting features, and reproducing all test metrics (75.76% F1, 60.98% IoU, 150.28× compression).<br/><br/>"
+            "</a></u></font><br/><br/>"
             "<b>Poster Link:</b><br/>"
             "<font color='#1a5fb4'><u><a href='https://canva.link/al2b8pyh7258iib'>"
             "https://canva.link/al2b8pyh7258iib"
-            "</a></u></font><br/>"
-            "Interactive digital research poster presenting the asymmetric architecture, distillation results, and qualitative error analysis.",
+            "</a></u></font>",
             styles["body"],
         ),
     ]
