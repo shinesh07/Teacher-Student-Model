@@ -1,6 +1,6 @@
 {
   "bundle_path": "models/development_bundle.pkl",
-  "bundle_sha256": "de00f5ee403d65a8336b66830ab4aff9e007edfdcc61b54468fd490da53c747d",
+  "bundle_sha256": "0a622eb7870f4b9abe8699e73dfc20b2a1c520e3d0174bb93c089efc3fefbcbd",
   "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
   "selection": {
     "best_hard_supervised_key": "random_forest_to_random_forest",

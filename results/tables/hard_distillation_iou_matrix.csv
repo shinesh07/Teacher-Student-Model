@@ -1,4 +1,4 @@
-gaussian_nb_student_iou_percent,knn_student_iou_percent,random_forest_student_iou_percent,teacher
-54.97139687206833,59.40774798584678,60.06013144116306,knn
-54.96163070669902,59.36544087607009,60.9825975337217,random_forest
-53.32364942455234,55.35073090513678,54.6386506186899,gaussian_nb
+Teacher,KNN Student IoU (%),RF Student IoU (%),GNB Student IoU (%)
+KNN,59.41,60.06,54.97
+Random Forest,59.37,60.98,54.96
+Gaussian NB,55.35,54.64,53.32

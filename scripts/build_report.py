@@ -202,7 +202,7 @@ def main() -> None:
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(28)
     p.add_run("CS3103 Machine Learning Project Report").bold = True
-    for line in ["Student: ____________________", "Roll number: ____________________", "Dataset: faizalkarim/flood-area-segmentation (Kaggle, version 1)", "Experiment seed: 42 | Final checkpoint: PASSED"]:
+    for line in ["Student: Bojedla Shinesh", "Roll number: 2401CS75", "Date: 14 November 2026", "Dataset: faizalkarim/flood-area-segmentation (Kaggle, version 1)", "Experiment seed: 42 | Final checkpoint: PASSED"]:
         p = doc.add_paragraph(line)
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_after = Pt(3)
@@ -238,7 +238,8 @@ def main() -> None:
         ["Validation", "29", "All development selection", "37.89%"],
         ["Test", "58", "Frozen final evaluation only", "38.34% (descriptive audit only)"],
     ], [0.9, 0.7, 2.5, 2.3])
-    add_figure(doc, "audit_class_balance.png", "Figure 1. Post-preprocessing class balance. Test prevalence is reported descriptively, not used for selection.", 5.9)
+    add_figure(doc, "audit_class_balance.png", "Figure 1. Post-preprocessing class balance across partitions. Test prevalence is reported descriptively, not used for selection.", 5.9)
+    add_figure(doc, "audit_labelled_examples.png", "Figure 2. Representative training image-mask pairs from partition L showing raw flood scenes and ground-truth flood annotations.", 6.2)
     doc.add_paragraph(
         "Preprocessing is deterministic: Pillow converts every source image to RGB; images use bilinear resizing to 256×256; masks are thresholded at ≥128 and resized with nearest neighbour. An audit found 290 image–mask pairs, no corrupt source images, and source modes P=2, RGB=287 and RGBA=1 before RGB conversion."
     )
@@ -249,7 +250,7 @@ def main() -> None:
     doc.add_paragraph(
         "The student feature vector is intentionally compact: RGB (3), HSV hue/saturation/value (3), for six values per pixel. The teacher extends it to 20 values with Gaussian-blurred RGB, local mean/standard-deviation descriptors, Sobel magnitude, Laplacian and normalized pixel coordinates. The student therefore uses 6/20 = 30% of teacher features, satisfying both the ≤6 and ≤half budget."
     )
-    add_figure(doc, "pipeline_architecture.png", "Figure 2. Leak-safe pipeline: all tuning ends at validation; test labels are read only after the selection manifest is frozen.", 6.35)
+    add_figure(doc, "pipeline_architecture.png", "Figure 3. Leak-safe pipeline: all tuning ends at validation; test labels are read only after the selection manifest is frozen.", 6.35)
     add_table(doc, ["Family", "Teacher budget", "Student budget", "Actual student fit"], [
         ["KNN", "≥20,000 references; rich features", "≤5,000 references; 6 features", "5,000"],
         ["Random Forest", "≥200 trees; rich features", "≤20 trees; depth ≤8; 6 features", "20,000 pixels"],
@@ -286,6 +287,7 @@ def main() -> None:
     doc.add_paragraph(
         "RF is the strongest teacher on the held-out test set. The compact baselines establish that a six-feature RF can be fast but loses accuracy without transferred pseudo-labels. Reported test outcomes are not used to replace the validation selection."
     )
+    add_figure(doc, "supervised_teacher_vs_baseline.png", "Figure 4. Supervised teachers vs compact baselines across F1 and IoU, illustrating the baseline performance drop before knowledge transfer.", 5.8)
     add_table(doc, ["Category", "Candidate", "Teacher", "F1", "IoU", "Delta IoU vs base"], [
         [r["category"], r["candidate"], r["uses_teacher"], fmt_pct(r["test_f1_percent"]), fmt_pct(r["test_iou_percent"]), "n/a" if r["delta_iou_vs_corresponding_base_percentage_points"] == "" else f"{float(r['delta_iou_vs_corresponding_base_percentage_points']):+.2f} pp"]
         for r in final_comparison
@@ -298,11 +300,12 @@ def main() -> None:
         [r["teacher"].replace("random_forest", "RF").replace("gaussian_nb", "GNB").upper(), fmt_pct(r["knn_student_iou_percent"]), fmt_pct(r["random_forest_student_iou_percent"]), fmt_pct(r["gaussian_nb_student_iou_percent"])]
         for r in matrix
     ], [2.0, 1.2, 1.2, 1.2])
+    add_figure(doc, "hard_distillation_heatmap.png", "Figure 5. Hard-distillation test IoU matrix heatmap across all 9 teacher-student pairs.", 4.5)
     add_table(doc, ["Pair", "τ", "F1", "IoU", "Δ IoU vs compact baseline", "Retention", "Compression"], [
         [r["pair"].replace("random_forest", "RF").replace("gaussian_nb", "GNB").replace("_to_", " → "), r["selected_tau"], fmt_pct(r["test_f1_percent"]), fmt_pct(r["test_iou_percent"]), f"{float(r['delta_iou_percentage_points']):+.2f} pp", fmt_pct(r["retention_percent"]), fmt_x(r["compression_ratio"])]
         for r in hard
     ], [1.5, 0.45, 0.72, 0.72, 1.45, 0.95, 0.95])
-    add_figure(doc, "tau_study.png", "Figure 3. Validation IoU and corrected retained-pseudo-label fraction across confidence thresholds.", 6.2)
+    add_figure(doc, "tau_study.png", "Figure 6. Validation IoU and corrected retained-pseudo-label fraction across confidence thresholds.", 6.0)
     doc.add_paragraph(
         f"The validation-selected RF→RF hard student is the supervised choice: test F1 {fmt_pct(selected_hard['test_f1_percent'])}, IoU {fmt_pct(selected_hard['test_iou_percent'])}, agreement {fmt_pct(float(selected_hard['agreement']) * 100)}, retention {fmt_pct(selected_hard['retention_percent'])}, {fmt_x(selected_hard['compression_ratio'])} compression and {fmt_x(selected_hard['speedup'])} speedup. It gains {float(selected_hard['delta_f1_percentage_points']):+.2f} F1 points and {float(selected_hard['delta_iou_percentage_points']):+.2f} IoU points over its no-teacher compact RF baseline."
     )
@@ -315,7 +318,8 @@ def main() -> None:
         [r["clusters"], f"{float(r['silhouette']):.3f}", fmt_pct(json.loads(r["validation"])["iou"] * 100), "Selected" if r["clusters"] == "6" else "Not selected"]
         for r in kselect
     ], [1.3, 1.35, 1.4, 1.3])
-    add_figure(doc, "kmeans_teacher_selection.png", "Figure 4. K-Means teacher selection: K=6 maximized silhouette on the image-only sample.", 5.8)
+    add_figure(doc, "kmeans_teacher_selection.png", "Figure 7. K-Means teacher selection: K=6 maximized silhouette on the image-only sample.", 5.8)
+    add_figure(doc, "kmeans_variants_comparison.png", "Figure 8. Comparison of the four K-Means student variants on validation and test IoU.", 5.8)
     add_table(doc, ["Student", "Lloyd updates", "Mapping", "F1", "IoU", "ARI", "NMI", "Retention", "Compression"], [
         [r["model"].replace("km_", "").replace("__", " / "), "No" if "frozen" in r["model"] else ("Baseline" if r["model"] == "km_baseline" else "Yes"), "—" if r["model"] == "km_baseline" else ("Inherited" if "inherited" in r["model"] else "Re-estimated L"), fmt_pct(r["test_f1_percent"]), fmt_pct(r["test_iou_percent"]), f"{float(r['ari']):.3f}", f"{float(r['nmi']):.3f}", fmt_pct(r["retention_percent"]), fmt_x(r["compression_ratio"])]
         for r in kmeans
@@ -327,15 +331,15 @@ def main() -> None:
     add_heading(doc, "8. Qualitative error analysis")
     doc.add_paragraph("Four frozen test examples compare RGB input, ground truth, the RF teacher, selected RF student, K-Means teacher and selected K-Means student. They are diagnostic outputs, not cherry-picked after retraining.")
     for filename, caption in [
-        ("qualitative_1_3015.png", "Figure 5. Test image 3015.jpg: strong agreement on a large flooded region."),
-        ("qualitative_2_3095.png", "Figure 6. Test image 3095.jpg: a difficult scene with lower K-Means-student precision."),
-        ("qualitative_3_3.png", "Figure 7. Test image 3.jpg: the selected RF student has high recall but over-segments some background."),
-        ("qualitative_4_1058.png", "Figure 8. Test image 1058.jpg: complementary teacher/student boundary errors."),
+        ("qualitative_1_3015.png", "Figure 9. Test image 3015.jpg: strong agreement on a large flooded region."),
+        ("qualitative_2_3095.png", "Figure 10. Test image 3095.jpg: a difficult scene with lower K-Means-student precision."),
+        ("qualitative_3_3.png", "Figure 11. Test image 3.jpg: the selected RF student has high recall but over-segments some background."),
+        ("qualitative_4_1058.png", "Figure 12. Test image 1058.jpg: complementary teacher/student boundary errors."),
     ]:
         add_figure(doc, filename, caption, 6.15)
 
     add_heading(doc, "9. Interpretation, limitations and responsible use")
-    add_bullet(doc, "The selected hard RF student is an effective compact transfer result: it outperforms the same-budget no-teacher RF baseline on the frozen test set, while retaining 92.39% of the teacher F1 and using a far smaller serialized model.")
+    add_bullet(doc, "The selected hard RF student is an effective compact transfer result: it outperforms the same-budget no-teacher RF baseline on the frozen test set, while retaining 92.39% of teacher IoU (95.27% of teacher F1) and using a far smaller serialized model.")
     add_bullet(doc, "Hard pseudo-labels beat the tested soft weighted-duplication method. This is an empirical result for this split and feature design, not a general claim that hard distillation is always better.")
     add_bullet(doc, "The dataset contains exact image duplicates across mandatory partitions, including an L↔test duplicate. The split was intentionally not changed because the brief prescribes it; all reported results should be read with potential optimism from this dataset property.")
     add_bullet(doc, "The result lifecycle includes a corrected C3→C4 rerun after a reporting-only denominator defect. Earlier C3/C4 manifests are retained and marked invalidated. The final metrics shown here did not guide model selection or retraining, but the project should not claim a single historical test-read event.")

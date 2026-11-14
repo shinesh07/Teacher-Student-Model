@@ -28,12 +28,12 @@
       256
     ],
     "rgb_loader": "Pillow convert('RGB'); no BGR interpretation is used",
-    "root": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/data/raw",
+    "root": "/Users/shinesh/ML_LabLProject/data/raw",
     "slug": "faizalkarim/flood-area-segmentation"
   },
   "figures": [
-    "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/audit_class_balance.png",
-    "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/audit_labelled_examples.png"
+    "/Users/shinesh/ML_LabLProject/results/figures/audit_class_balance.png",
+    "/Users/shinesh/ML_LabLProject/results/figures/audit_labelled_examples.png"
   ],
   "image_inventory": {
     "corrupt_images": [],
@@ -437,7 +437,7 @@
       "scikit-learn": "1.9.0",
       "scipy": "1.18.1"
     },
-    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
     "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]"
   },
   "structure": {

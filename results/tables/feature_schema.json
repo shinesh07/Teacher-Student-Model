@@ -1,10 +1,10 @@
 {
   "feature_timing": {
     "images_extracted": 272,
-    "student_mean_seconds_per_image": 0.0012904027169510942,
-    "student_median_seconds_per_image": 0.0012826040001527872,
-    "teacher_mean_seconds_per_image": 0.008070571544127395,
-    "teacher_median_seconds_per_image": 0.00802268749976065
+    "student_mean_seconds_per_image": 0.001252721812494094,
+    "student_median_seconds_per_image": 0.001240020999830449,
+    "teacher_mean_seconds_per_image": 0.007963958511067282,
+    "teacher_median_seconds_per_image": 0.007954312501169625
   },
   "student": [
     "red",

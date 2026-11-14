@@ -1,11 +1,11 @@
 {
   "checkpoint": "CP03_development_selection",
   "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
-  "created_at_utc": "2026-11-09T08:47:36.016893+00:00",
+  "created_at_utc": "2026-11-14T12:46:29.524310+00:00",
   "evidence": {
-    "bundle_path": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/models/development_bundle.pkl",
-    "bundle_sha256": "de00f5ee403d65a8336b66830ab4aff9e007edfdcc61b54468fd490da53c747d",
-    "frozen_manifest": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/frozen_selection.json",
+    "bundle_path": "/Users/shinesh/ML_LabLProject/models/development_bundle.pkl",
+    "bundle_sha256": "0a622eb7870f4b9abe8699e73dfc20b2a1c520e3d0174bb93c089efc3fefbcbd",
+    "frozen_manifest": "/Users/shinesh/ML_LabLProject/results/frozen_selection.json",
     "models": {
       "baselines": {
         "gaussian_nb": {
@@ -203,7 +203,7 @@
       "scikit-learn": "1.9.0",
       "scipy": "1.18.1"
     },
-    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
     "python": "3.14.3"
   },
   "status": "PASSED"
