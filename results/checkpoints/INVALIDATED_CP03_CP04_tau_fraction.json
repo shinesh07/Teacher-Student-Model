@@ -1,0 +1,9 @@
+{
+  "affected_checkpoints": [
+    "CP03_development_selection",
+    "CP04_final_test"
+  ],
+  "reason": "The hard-distillation confidence-retained fraction used the filtered candidate pool as its denominator rather than all teacher-annotated transfer pixels. The defect did not alter pseudo-labels, fitted models, thresholds, capacity checks, or final metrics, but it made the tau-study evidence incorrect.",
+  "remediation": "Corrected the transfer-pool denominator in src/distillation.py, added a regression test, preserved the prior manifests with pre_tau_fraction_correction suffixes, and will rebuild CP03 followed by CP04 from the fixed source.",
+  "selection_from_test_data": false
+}

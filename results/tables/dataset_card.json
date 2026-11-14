@@ -1,0 +1,451 @@
+{
+  "checkpoint": "CP01_dataset_audit",
+  "class_statistics": {
+    "labelled": {
+      "flood_pixel_fraction": 0.36489410400390626,
+      "images": 40,
+      "positive_pixels": 956548,
+      "total_pixels": 2621440
+    },
+    "test": {
+      "flood_pixel_fraction": 0.3834486336543642,
+      "images": 58,
+      "positive_pixels": 1457522,
+      "total_pixels": 3801088
+    },
+    "validation": {
+      "flood_pixel_fraction": 0.3788720492658944,
+      "images": 29,
+      "positive_pixels": 720063,
+      "total_pixels": 1900544
+    }
+  },
+  "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
+  "dataset_source": {
+    "mask_threshold": 128,
+    "processed_size": [
+      256,
+      256
+    ],
+    "rgb_loader": "Pillow convert('RGB'); no BGR interpretation is used",
+    "root": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/data/raw",
+    "slug": "faizalkarim/flood-area-segmentation"
+  },
+  "figures": [
+    "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/audit_class_balance.png",
+    "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/audit_labelled_examples.png"
+  ],
+  "image_inventory": {
+    "corrupt_images": [],
+    "cross_partition_duplicate_groups": [
+      {
+        "filenames": [
+          "1012.jpg",
+          "1057.jpg"
+        ],
+        "partitions": [
+          "unlabelled",
+          "validation"
+        ]
+      },
+      {
+        "filenames": [
+          "1021.jpg",
+          "43.jpg"
+        ],
+        "partitions": [
+          "test",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "1026.jpg",
+          "18.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "test"
+        ]
+      },
+      {
+        "filenames": [
+          "1041.jpg",
+          "3033.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "1044.jpg",
+          "46.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "validation"
+        ]
+      },
+      {
+        "filenames": [
+          "1049.jpg",
+          "3019.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "26.jpg",
+          "3020.jpg"
+        ],
+        "partitions": [
+          "test",
+          "unlabelled"
+        ]
+      }
+    ],
+    "exact_duplicate_groups": [
+      {
+        "filenames": [
+          "1012.jpg",
+          "1057.jpg"
+        ],
+        "partitions": [
+          "unlabelled",
+          "validation"
+        ]
+      },
+      {
+        "filenames": [
+          "1021.jpg",
+          "43.jpg"
+        ],
+        "partitions": [
+          "test",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "1026.jpg",
+          "18.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "test"
+        ]
+      },
+      {
+        "filenames": [
+          "1033.jpg",
+          "3029.jpg"
+        ],
+        "partitions": [
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "1041.jpg",
+          "3033.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "1044.jpg",
+          "46.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "validation"
+        ]
+      },
+      {
+        "filenames": [
+          "1049.jpg",
+          "3019.jpg"
+        ],
+        "partitions": [
+          "labelled",
+          "unlabelled"
+        ]
+      },
+      {
+        "filenames": [
+          "26.jpg",
+          "3020.jpg"
+        ],
+        "partitions": [
+          "test",
+          "unlabelled"
+        ]
+      }
+    ],
+    "fixed_split_duplicate_warning": "Exact duplicate source photographs span fixed partitions. The required split was retained unchanged; this is documented as a validity limitation, not corrected through data-driven re-splitting.",
+    "modes": {
+      "P": 2,
+      "RGB": 287,
+      "RGBA": 1
+    },
+    "raw_image_inventory_sha256": "f8b0c4ce01e823dcabfe153d21beb031360216bd30f0e04f015609ee2f84ee4f",
+    "source_dimensions": {
+      "1000x561": 1,
+      "1000x563": 1,
+      "1000x565": 2,
+      "1000x666": 3,
+      "1000x667": 1,
+      "1012x490": 1,
+      "1020x671": 1,
+      "1024x462": 1,
+      "1024x576": 2,
+      "1024x607": 1,
+      "1024x630": 1,
+      "1024x680": 1,
+      "1024x682": 7,
+      "1024x685": 1,
+      "1036x659": 1,
+      "1080x608": 2,
+      "1080x716": 1,
+      "1080x810": 1,
+      "1099x1080": 1,
+      "1170x780": 1,
+      "1198x673": 1,
+      "1200x630": 2,
+      "1200x641": 2,
+      "1200x667": 1,
+      "1200x669": 1,
+      "1200x675": 4,
+      "1200x676": 2,
+      "1200x749": 3,
+      "1200x799": 1,
+      "1200x800": 5,
+      "1200x900": 4,
+      "1222x1500": 1,
+      "1225x714": 1,
+      "1232x821": 2,
+      "1246x520": 1,
+      "1248x650": 1,
+      "1280x720": 5,
+      "1280x960": 1,
+      "1300x750": 1,
+      "1400x1400": 2,
+      "1400x420": 1,
+      "1491x1003": 1,
+      "1593x1185": 1,
+      "1600x1065": 1,
+      "1600x900": 3,
+      "1699x781": 1,
+      "1800x1800": 1,
+      "1820x1024": 1,
+      "1900x1425": 2,
+      "1920x1005": 1,
+      "2000x1125": 1,
+      "2000x1132": 1,
+      "2000x1333": 2,
+      "2000x1500": 2,
+      "2100x1367": 1,
+      "2100x1400": 2,
+      "2200x1467": 2,
+      "2231x949": 1,
+      "2400x1800": 1,
+      "2500x1313": 1,
+      "2503x1664": 1,
+      "2560x1316": 1,
+      "2560x1440": 1,
+      "2560x1706": 1,
+      "2733x1822": 1,
+      "2981x1478": 1,
+      "3000x1998": 1,
+      "3160x1778": 1,
+      "3200x2137": 1,
+      "330x244": 1,
+      "340x221": 1,
+      "3500x2141": 1,
+      "357x300": 1,
+      "374x510": 1,
+      "380x285": 1,
+      "3840x2160": 2,
+      "3992x2242": 1,
+      "400x225": 1,
+      "400x240": 1,
+      "400x300": 1,
+      "400x400": 1,
+      "402x328": 1,
+      "408x230": 2,
+      "408x272": 1,
+      "4095x2505": 1,
+      "4095x2730": 1,
+      "435x290": 1,
+      "450x250": 1,
+      "450x253": 1,
+      "450x338": 1,
+      "4640x2610": 1,
+      "480x270": 2,
+      "480x360": 1,
+      "4859x3644": 1,
+      "5000x3333": 1,
+      "500x300": 1,
+      "510x259": 1,
+      "512x341": 1,
+      "5184x3456": 3,
+      "5472x3648": 1,
+      "553x311": 1,
+      "587x390": 1,
+      "590x332": 3,
+      "590x350": 1,
+      "595x350": 1,
+      "600x312": 1,
+      "600x314": 1,
+      "600x337": 3,
+      "600x338": 3,
+      "600x400": 3,
+      "600x442": 1,
+      "600x450": 3,
+      "600x469": 1,
+      "604x440": 2,
+      "610x407": 1,
+      "612x344": 1,
+      "612x408": 4,
+      "612x459": 2,
+      "620x400": 2,
+      "620x402": 1,
+      "620x464": 3,
+      "621x414": 2,
+      "626x351": 1,
+      "626x352": 1,
+      "626x417": 1,
+      "626x470": 1,
+      "628x378": 1,
+      "630x354": 1,
+      "630x355": 1,
+      "630x418": 1,
+      "634x950": 1,
+      "640x366": 1,
+      "640x381": 1,
+      "640x450": 1,
+      "640x480": 1,
+      "650x279": 1,
+      "650x400": 1,
+      "650x433": 2,
+      "660x361": 1,
+      "660x372": 1,
+      "660x373": 1,
+      "660x440": 2,
+      "670x447": 1,
+      "681x720": 1,
+      "693x390": 2,
+      "700x389": 1,
+      "700x394": 1,
+      "700x400": 1,
+      "700x415": 2,
+      "700x467": 1,
+      "700x933": 1,
+      "715x402": 1,
+      "718x404": 1,
+      "724x543": 1,
+      "736x488": 1,
+      "749x506": 1,
+      "750x422": 1,
+      "750x450": 1,
+      "750x464": 1,
+      "754x410": 1,
+      "759x219": 1,
+      "759x422": 2,
+      "760x443": 1,
+      "768x432": 3,
+      "770x230": 1,
+      "770x433": 3,
+      "770x513": 3,
+      "780x438": 1,
+      "780x520": 2,
+      "782x434": 1,
+      "798x296": 1,
+      "800x449": 2,
+      "800x450": 2,
+      "800x463": 1,
+      "800x480": 2,
+      "800x532": 1,
+      "800x600": 3,
+      "820x615": 1,
+      "825x510": 1,
+      "840x440": 1,
+      "858x536": 1,
+      "862x575": 1,
+      "875x583": 2,
+      "893x551": 1,
+      "900x450": 2,
+      "900x476": 1,
+      "900x506": 1,
+      "900x600": 3,
+      "900x675": 1,
+      "918x506": 2,
+      "929x523": 2,
+      "936x715": 1,
+      "960x540": 2,
+      "960x600": 1,
+      "960x648": 1,
+      "975x547": 2,
+      "976x549": 1,
+      "976x650": 1,
+      "982x726": 2,
+      "991x648": 1,
+      "992x558": 1
+    }
+  },
+  "labelled_rgb_statistics": {
+    "mean_rgb": [
+      0.4850589229286495,
+      0.4814935394909625,
+      0.43864488239245586
+    ],
+    "pixels": 2621440,
+    "std_rgb": [
+      0.2277301636634748,
+      0.2118679104620777,
+      0.23061310541149793
+    ]
+  },
+  "metadata": {
+    "columns": [
+      "Image",
+      "Mask"
+    ],
+    "exists": true,
+    "image_filenames_match_dataset": true,
+    "mask_stems_match_images": true,
+    "metadata_sha256": "b4b9160caeec5a7bf8dba62a3d6f9c4f6df08e27b50041c81d2ffb7d8fd0a5cd",
+    "missing_cells": 0,
+    "rows": 290
+  },
+  "runtime": {
+    "cpu_count": 8,
+    "implementation": "CPython",
+    "machine": "arm64",
+    "packages": {
+      "Pillow": "12.3.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1"
+    },
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]"
+  },
+  "structure": {
+    "images": 290,
+    "labelled": 40,
+    "masks": 290,
+    "test": 58,
+    "unlabelled": 163,
+    "validation": 29
+  }
+}

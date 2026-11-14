@@ -1,0 +1,586 @@
+{
+  "baselines": {
+    "gaussian_nb": {
+      "family": "gaussian_nb",
+      "feature_count": 6,
+      "fit_count": 20000,
+      "selected": {
+        "capacity": {
+          "classes": 2,
+          "family": "gaussian_nb",
+          "feature_count": 6,
+          "fit_pixels": 20000,
+          "model_class": "GaussianNB",
+          "role": "student"
+        },
+        "fit_pixels": 20000,
+        "parameters": {
+          "var_smoothing": 1e-09
+        },
+        "threshold": 0.3,
+        "threshold_trials": [
+          {
+            "f1": 0.6671800616073928,
+            "fn": 845,
+            "fp": 3909,
+            "iou": 0.5005777917848514,
+            "n_pixels": 14848,
+            "precision": 0.5493428637306894,
+            "recall": 0.8493761140819964,
+            "threshold": 0.3,
+            "tn": 5329,
+            "tp": 4765
+          },
+          {
+            "f1": 0.6638205499276411,
+            "fn": 1023,
+            "fp": 3623,
+            "iou": 0.4968049388064551,
+            "n_pixels": 14848,
+            "precision": 0.5587088915956151,
+            "recall": 0.8176470588235294,
+            "threshold": 0.4,
+            "tn": 5615,
+            "tp": 4587
+          },
+          {
+            "f1": 0.6590824040116757,
+            "fn": 1207,
+            "fp": 3348,
+            "iou": 0.49151596338468406,
+            "n_pixels": 14848,
+            "precision": 0.568055734743904,
+            "recall": 0.7848484848484848,
+            "threshold": 0.5,
+            "tn": 5890,
+            "tp": 4403
+          },
+          {
+            "f1": 0.65803148995579,
+            "fn": 1368,
+            "fp": 3041,
+            "iou": 0.490347936654722,
+            "n_pixels": 14848,
+            "precision": 0.582452286145819,
+            "recall": 0.7561497326203208,
+            "threshold": 0.6,
+            "tn": 6197,
+            "tp": 4242
+          },
+          {
+            "f1": 0.6534829284042295,
+            "fn": 1562,
+            "fp": 2731,
+            "iou": 0.4853135115693562,
+            "n_pixels": 14848,
+            "precision": 0.5971382209765452,
+            "recall": 0.7215686274509804,
+            "threshold": 0.7,
+            "tn": 6507,
+            "tp": 4048
+          }
+        ],
+        "training_seconds": 0.002080958999613358,
+        "validation": {
+          "f1": 0.6671800616073928,
+          "fn": 845,
+          "fp": 3909,
+          "iou": 0.5005777917848514,
+          "n_pixels": 14848,
+          "precision": 0.5493428637306894,
+          "recall": 0.8493761140819964,
+          "threshold": 0.3,
+          "tn": 5329,
+          "tp": 4765
+        }
+      },
+      "threshold": 0.3
+    },
+    "knn": {
+      "family": "knn",
+      "feature_count": 6,
+      "fit_count": 5000,
+      "selected": {
+        "capacity": {
+          "family": "knn",
+          "feature_count": 6,
+          "fit_pixels": 5000,
+          "model_class": "KNeighborsClassifier",
+          "reference_pixels": 5000,
+          "role": "student"
+        },
+        "fit_pixels": 5000,
+        "parameters": {
+          "n_neighbors": 21
+        },
+        "threshold": 0.5,
+        "threshold_trials": [
+          {
+            "f1": 0.6694025179105515,
+            "fn": 798,
+            "fp": 3955,
+            "iou": 0.5030841610036592,
+            "n_pixels": 14848,
+            "precision": 0.5488764685753393,
+            "recall": 0.8577540106951872,
+            "threshold": 0.3,
+            "tn": 5283,
+            "tp": 4812
+          },
+          {
+            "f1": 0.6821497692422211,
+            "fn": 1028,
+            "fp": 3242,
+            "iou": 0.51762313601446,
+            "n_pixels": 14848,
+            "precision": 0.5856339468302658,
+            "recall": 0.8167557932263815,
+            "threshold": 0.4,
+            "tn": 5996,
+            "tp": 4582
+          },
+          {
+            "f1": 0.6856084996780425,
+            "fn": 1351,
+            "fp": 2555,
+            "iou": 0.5216166564605021,
+            "n_pixels": 14848,
+            "precision": 0.6250366891693572,
+            "recall": 0.7591800356506239,
+            "threshold": 0.5,
+            "tn": 6683,
+            "tp": 4259
+          },
+          {
+            "f1": 0.6754286709026025,
+            "fn": 1730,
+            "fp": 1999,
+            "iou": 0.5099224602444473,
+            "n_pixels": 14848,
+            "precision": 0.659976186426263,
+            "recall": 0.6916221033868093,
+            "threshold": 0.6,
+            "tn": 7239,
+            "tp": 3880
+          },
+          {
+            "f1": 0.6467938272788268,
+            "fn": 2236,
+            "fp": 1449,
+            "iou": 0.47797138404873213,
+            "n_pixels": 14848,
+            "precision": 0.6995645863570392,
+            "recall": 0.6014260249554367,
+            "threshold": 0.7,
+            "tn": 7789,
+            "tp": 3374
+          }
+        ],
+        "training_seconds": 0.001383707999593753,
+        "validation": {
+          "f1": 0.6856084996780425,
+          "fn": 1351,
+          "fp": 2555,
+          "iou": 0.5216166564605021,
+          "n_pixels": 14848,
+          "precision": 0.6250366891693572,
+          "recall": 0.7591800356506239,
+          "threshold": 0.5,
+          "tn": 6683,
+          "tp": 4259
+        }
+      },
+      "threshold": 0.5
+    },
+    "random_forest": {
+      "family": "random_forest",
+      "feature_count": 6,
+      "fit_count": 20000,
+      "selected": {
+        "capacity": {
+          "family": "random_forest",
+          "feature_count": 6,
+          "fit_pixels": 20000,
+          "max_fitted_depth": 8,
+          "model_class": "RandomForestClassifier",
+          "role": "student",
+          "trees": 20
+        },
+        "fit_pixels": 20000,
+        "parameters": {
+          "max_depth": 8,
+          "n_estimators": 20
+        },
+        "threshold": 0.4,
+        "threshold_trials": [
+          {
+            "f1": 0.6814430880447384,
+            "fn": 614,
+            "fp": 4057,
+            "iou": 0.516809765180511,
+            "n_pixels": 14848,
+            "precision": 0.5518612614602894,
+            "recall": 0.8905525846702317,
+            "threshold": 0.3,
+            "tn": 5181,
+            "tp": 4996
+          },
+          {
+            "f1": 0.7026870007262165,
+            "fn": 772,
+            "fp": 3322,
+            "iou": 0.5416480071652485,
+            "n_pixels": 14848,
+            "precision": 0.5928921568627451,
+            "recall": 0.8623885918003565,
+            "threshold": 0.4,
+            "tn": 5916,
+            "tp": 4838
+          },
+          {
+            "f1": 0.6978669213626234,
+            "fn": 1226,
+            "fp": 2570,
+            "iou": 0.5359413202933986,
+            "n_pixels": 14848,
+            "precision": 0.6304285303422491,
+            "recall": 0.7814616755793227,
+            "threshold": 0.5,
+            "tn": 6668,
+            "tp": 4384
+          },
+          {
+            "f1": 0.6961227930086061,
+            "fn": 1687,
+            "fp": 1738,
+            "iou": 0.533886771910724,
+            "n_pixels": 14848,
+            "precision": 0.6929871047518106,
+            "recall": 0.6992869875222817,
+            "threshold": 0.6,
+            "tn": 7500,
+            "tp": 3923
+          },
+          {
+            "f1": 0.6694487577639752,
+            "fn": 2161,
+            "fp": 1245,
+            "iou": 0.5031363967906638,
+            "n_pixels": 14848,
+            "precision": 0.7347677886663826,
+            "recall": 0.6147950089126559,
+            "threshold": 0.7,
+            "tn": 7993,
+            "tp": 3449
+          }
+        ],
+        "training_seconds": 0.05879062499934662,
+        "validation": {
+          "f1": 0.7026870007262165,
+          "fn": 772,
+          "fp": 3322,
+          "iou": 0.5416480071652485,
+          "n_pixels": 14848,
+          "precision": 0.5928921568627451,
+          "recall": 0.8623885918003565,
+          "threshold": 0.4,
+          "tn": 5916,
+          "tp": 4838
+        }
+      },
+      "threshold": 0.4
+    }
+  },
+  "teachers": {
+    "gaussian_nb": {
+      "family": "gaussian_nb",
+      "feature_count": 20,
+      "fit_count": 50000,
+      "selected": {
+        "capacity": {
+          "classes": 2,
+          "family": "gaussian_nb",
+          "feature_count": 20,
+          "fit_pixels": 50000,
+          "model_class": "GaussianNB",
+          "role": "teacher"
+        },
+        "fit_pixels": 50000,
+        "parameters": {
+          "var_smoothing": 1e-09
+        },
+        "threshold": 0.4,
+        "threshold_trials": [
+          {
+            "f1": 0.6909174452442947,
+            "fn": 1099,
+            "fp": 2937,
+            "iou": 0.5277875277875278,
+            "n_pixels": 14848,
+            "precision": 0.6056659505907627,
+            "recall": 0.8040998217468805,
+            "threshold": 0.3,
+            "tn": 6301,
+            "tp": 4511
+          },
+          {
+            "f1": 0.6910865019747541,
+            "fn": 1148,
+            "fp": 2841,
+            "iou": 0.5279848538634481,
+            "n_pixels": 14848,
+            "precision": 0.6109817883061756,
+            "recall": 0.7953654188948307,
+            "threshold": 0.4,
+            "tn": 6397,
+            "tp": 4462
+          },
+          {
+            "f1": 0.690453834115806,
+            "fn": 1198,
+            "fp": 2758,
+            "iou": 0.527246653919694,
+            "n_pixels": 14848,
+            "precision": 0.6153417015341701,
+            "recall": 0.7864527629233512,
+            "threshold": 0.5,
+            "tn": 6480,
+            "tp": 4412
+          },
+          {
+            "f1": 0.689321926489227,
+            "fn": 1259,
+            "fp": 2663,
+            "iou": 0.5259277166686812,
+            "n_pixels": 14848,
+            "precision": 0.6203307670373539,
+            "recall": 0.7755793226381462,
+            "threshold": 0.6,
+            "tn": 6575,
+            "tp": 4351
+          },
+          {
+            "f1": 0.6901091843288375,
+            "fn": 1312,
+            "fp": 2548,
+            "iou": 0.5268448149056141,
+            "n_pixels": 14848,
+            "precision": 0.6278118609406953,
+            "recall": 0.7661319073083779,
+            "threshold": 0.7,
+            "tn": 6690,
+            "tp": 4298
+          }
+        ],
+        "training_seconds": 0.0041437499994572136,
+        "validation": {
+          "f1": 0.6910865019747541,
+          "fn": 1148,
+          "fp": 2841,
+          "iou": 0.5279848538634481,
+          "n_pixels": 14848,
+          "precision": 0.6109817883061756,
+          "recall": 0.7953654188948307,
+          "threshold": 0.4,
+          "tn": 6397,
+          "tp": 4462
+        }
+      },
+      "threshold": 0.4
+    },
+    "knn": {
+      "family": "knn",
+      "feature_count": 20,
+      "fit_count": 30000,
+      "selected": {
+        "capacity": {
+          "family": "knn",
+          "feature_count": 20,
+          "fit_pixels": 30000,
+          "model_class": "KNeighborsClassifier",
+          "reference_pixels": 30000,
+          "role": "teacher"
+        },
+        "fit_pixels": 30000,
+        "parameters": {
+          "n_neighbors": 31
+        },
+        "threshold": 0.6,
+        "threshold_trials": [
+          {
+            "f1": 0.7007621625471899,
+            "fn": 691,
+            "fp": 3510,
+            "iou": 0.5393640350877194,
+            "n_pixels": 14848,
+            "precision": 0.5835804959069878,
+            "recall": 0.8768270944741533,
+            "threshold": 0.3,
+            "tn": 5728,
+            "tp": 4919
+          },
+          {
+            "f1": 0.7318655851680186,
+            "fn": 873,
+            "fp": 2598,
+            "iou": 0.5771198830409356,
+            "n_pixels": 14848,
+            "precision": 0.6458077709611452,
+            "recall": 0.8443850267379679,
+            "threshold": 0.4,
+            "tn": 6640,
+            "tp": 4737
+          },
+          {
+            "f1": 0.7490799598527936,
+            "fn": 1132,
+            "fp": 1868,
+            "iou": 0.5988232147633057,
+            "n_pixels": 14848,
+            "precision": 0.705641348881185,
+            "recall": 0.7982174688057041,
+            "threshold": 0.5,
+            "tn": 7370,
+            "tp": 4478
+          },
+          {
+            "f1": 0.7534431541992977,
+            "fn": 1425,
+            "fp": 1314,
+            "iou": 0.604419410745234,
+            "n_pixels": 14848,
+            "precision": 0.7610474631751227,
+            "recall": 0.7459893048128342,
+            "threshold": 0.6,
+            "tn": 7924,
+            "tp": 4185
+          },
+          {
+            "f1": 0.7443037974683545,
+            "fn": 1788,
+            "fp": 838,
+            "iou": 0.592741935483871,
+            "n_pixels": 14848,
+            "precision": 0.8201716738197425,
+            "recall": 0.681283422459893,
+            "threshold": 0.7,
+            "tn": 8400,
+            "tp": 3822
+          }
+        ],
+        "training_seconds": 0.012077082999894628,
+        "validation": {
+          "f1": 0.7534431541992977,
+          "fn": 1425,
+          "fp": 1314,
+          "iou": 0.604419410745234,
+          "n_pixels": 14848,
+          "precision": 0.7610474631751227,
+          "recall": 0.7459893048128342,
+          "threshold": 0.6,
+          "tn": 7924,
+          "tp": 4185
+        }
+      },
+      "threshold": 0.6
+    },
+    "random_forest": {
+      "family": "random_forest",
+      "feature_count": 20,
+      "fit_count": 50000,
+      "selected": {
+        "capacity": {
+          "family": "random_forest",
+          "feature_count": 20,
+          "fit_pixels": 50000,
+          "max_fitted_depth": 16,
+          "model_class": "RandomForestClassifier",
+          "role": "teacher",
+          "trees": 200
+        },
+        "fit_pixels": 50000,
+        "parameters": {
+          "max_depth": 16,
+          "n_estimators": 200
+        },
+        "threshold": 0.6,
+        "threshold_trials": [
+          {
+            "f1": 0.7255450795521509,
+            "fn": 685,
+            "fp": 3041,
+            "iou": 0.5692983470119062,
+            "n_pixels": 14848,
+            "precision": 0.6182525734371077,
+            "recall": 0.8778966131907309,
+            "threshold": 0.3,
+            "tn": 6197,
+            "tp": 4925
+          },
+          {
+            "f1": 0.7575880210441117,
+            "fn": 930,
+            "fp": 2065,
+            "iou": 0.609771986970684,
+            "n_pixels": 14848,
+            "precision": 0.6938472942920682,
+            "recall": 0.8342245989304813,
+            "threshold": 0.4,
+            "tn": 7173,
+            "tp": 4680
+          },
+          {
+            "f1": 0.7759419529679168,
+            "fn": 1172,
+            "fp": 1391,
+            "iou": 0.6339094415083559,
+            "n_pixels": 14848,
+            "precision": 0.7613655858637846,
+            "recall": 0.7910873440285205,
+            "threshold": 0.5,
+            "tn": 7847,
+            "tp": 4438
+          },
+          {
+            "f1": 0.7763928234183192,
+            "fn": 1499,
+            "fp": 869,
+            "iou": 0.6345114986880691,
+            "n_pixels": 14848,
+            "precision": 0.8255020080321285,
+            "recall": 0.7327985739750446,
+            "threshold": 0.6,
+            "tn": 8369,
+            "tp": 4111
+          },
+          {
+            "f1": 0.7540681608842492,
+            "fn": 1926,
+            "fp": 477,
+            "iou": 0.6052242483982258,
+            "n_pixels": 14848,
+            "precision": 0.8853640951694304,
+            "recall": 0.6566844919786097,
+            "threshold": 0.7,
+            "tn": 8761,
+            "tp": 3684
+          }
+        ],
+        "training_seconds": 3.1214919170006397,
+        "validation": {
+          "f1": 0.7763928234183192,
+          "fn": 1499,
+          "fp": 869,
+          "iou": 0.6345114986880691,
+          "n_pixels": 14848,
+          "precision": 0.8255020080321285,
+          "recall": 0.7327985739750446,
+          "threshold": 0.6,
+          "tn": 8369,
+          "tp": 4111
+        }
+      },
+      "threshold": 0.6
+    }
+  }
+}

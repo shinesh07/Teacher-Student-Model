@@ -1,0 +1,19 @@
+{
+  "bundle_path": "models/development_bundle.pkl",
+  "bundle_sha256": "de00f5ee403d65a8336b66830ab4aff9e007edfdcc61b54468fd490da53c747d",
+  "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
+  "selection": {
+    "best_hard_supervised_key": "random_forest_to_random_forest",
+    "best_supervised_student": {
+      "key": "random_forest_to_random_forest",
+      "kind": "hard",
+      "validation_f1": 0.7193052987054755,
+      "validation_iou": 0.5616524359618282
+    },
+    "best_unsupervised_variant": "refined__reestimated_L",
+    "kmeans_teacher_selection": "maximum silhouette on fixed L-union-U image-only sample",
+    "selection_scope": "L ground truth, L-union-U images and validation only; no test mask opened",
+    "soft_comparison_pair": "random_forest_to_random_forest"
+  },
+  "status": "FROZEN_DEVELOPMENT_SELECTION"
+}

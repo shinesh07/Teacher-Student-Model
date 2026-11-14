@@ -1,0 +1,210 @@
+{
+  "checkpoint": "CP03_development_selection",
+  "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
+  "created_at_utc": "2026-11-09T08:47:36.016893+00:00",
+  "evidence": {
+    "bundle_path": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/models/development_bundle.pkl",
+    "bundle_sha256": "de00f5ee403d65a8336b66830ab4aff9e007edfdcc61b54468fd490da53c747d",
+    "frozen_manifest": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/frozen_selection.json",
+    "models": {
+      "baselines": {
+        "gaussian_nb": {
+          "family": "gaussian_nb",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "GaussianNB",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.3
+        },
+        "knn": {
+          "family": "knn",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 5000,
+          "model_class": "KNeighborsClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.5
+        },
+        "random_forest": {
+          "family": "random_forest",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "RandomForestClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.4
+        }
+      },
+      "hard_students": {
+        "gaussian_nb_to_gaussian_nb": {
+          "family": "gaussian_nb",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "GaussianNB",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.3
+        },
+        "gaussian_nb_to_knn": {
+          "family": "knn",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 5000,
+          "model_class": "KNeighborsClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.5
+        },
+        "gaussian_nb_to_random_forest": {
+          "family": "random_forest",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "RandomForestClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.5
+        },
+        "knn_to_gaussian_nb": {
+          "family": "gaussian_nb",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "GaussianNB",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.5
+        },
+        "knn_to_knn": {
+          "family": "knn",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 5000,
+          "model_class": "KNeighborsClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.6
+        },
+        "knn_to_random_forest": {
+          "family": "random_forest",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "RandomForestClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.7
+        },
+        "random_forest_to_gaussian_nb": {
+          "family": "gaussian_nb",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "GaussianNB",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.4
+        },
+        "random_forest_to_knn": {
+          "family": "knn",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 5000,
+          "model_class": "KNeighborsClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.4
+        },
+        "random_forest_to_random_forest": {
+          "family": "random_forest",
+          "feature_dimensions": 6,
+          "feature_set": "student",
+          "fit_pixels": 20000,
+          "model_class": "RandomForestClassifier",
+          "role": "student",
+          "task": "classification",
+          "threshold": 0.5
+        }
+      },
+      "soft_student": {
+        "family": "random_forest",
+        "feature_dimensions": 6,
+        "feature_set": "student",
+        "fit_pixels": 40000,
+        "model_class": "RandomForestClassifier",
+        "role": "student",
+        "task": "classification",
+        "threshold": 0.5
+      },
+      "teachers": {
+        "gaussian_nb": {
+          "family": "gaussian_nb",
+          "feature_dimensions": 20,
+          "feature_set": "teacher",
+          "fit_pixels": 50000,
+          "model_class": "GaussianNB",
+          "role": "teacher",
+          "task": "classification",
+          "threshold": 0.4
+        },
+        "knn": {
+          "family": "knn",
+          "feature_dimensions": 20,
+          "feature_set": "teacher",
+          "fit_pixels": 30000,
+          "model_class": "KNeighborsClassifier",
+          "role": "teacher",
+          "task": "classification",
+          "threshold": 0.6
+        },
+        "random_forest": {
+          "family": "random_forest",
+          "feature_dimensions": 20,
+          "feature_set": "teacher",
+          "fit_pixels": 50000,
+          "model_class": "RandomForestClassifier",
+          "role": "teacher",
+          "task": "classification",
+          "threshold": 0.6
+        }
+      }
+    },
+    "selected": {
+      "best_hard_supervised_key": "random_forest_to_random_forest",
+      "best_supervised_student": {
+        "key": "random_forest_to_random_forest",
+        "kind": "hard",
+        "validation_f1": 0.7193052987054755,
+        "validation_iou": 0.5616524359618282
+      },
+      "best_unsupervised_variant": "refined__reestimated_L",
+      "kmeans_teacher_selection": "maximum silhouette on fixed L-union-U image-only sample",
+      "selection_scope": "L ground truth, L-union-U images and validation only; no test mask opened",
+      "soft_comparison_pair": "random_forest_to_random_forest"
+    },
+    "structure": {
+      "images": 290,
+      "labelled": 40,
+      "masks": 290,
+      "test": 58,
+      "unlabelled": 163,
+      "validation": 29
+    }
+  },
+  "runtime": {
+    "packages": {
+      "Pillow": "12.3.0",
+      "numpy": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1"
+    },
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.3"
+  },
+  "status": "PASSED"
+}

@@ -1,0 +1,43 @@
+{
+  "feature_timing": {
+    "images_extracted": 272,
+    "student_mean_seconds_per_image": 0.0012288967315980165,
+    "student_median_seconds_per_image": 0.0012187914999230998,
+    "teacher_mean_seconds_per_image": 0.007780137558843508,
+    "teacher_median_seconds_per_image": 0.007756875000040964
+  },
+  "labelled_sample_manifests": 40,
+  "labelled_student_shape": [
+    50000,
+    6
+  ],
+  "labelled_target_shape": [
+    50000
+  ],
+  "labelled_teacher_shape": [
+    50000,
+    20
+  ],
+  "mapping_sample_manifests": 40,
+  "transfer_sample_manifests": 203,
+  "transfer_student_shape": [
+    103936,
+    6
+  ],
+  "transfer_teacher_shape": [
+    103936,
+    20
+  ],
+  "validation_sample_manifests": 29,
+  "validation_student_shape": [
+    14848,
+    6
+  ],
+  "validation_target_shape": [
+    14848
+  ],
+  "validation_teacher_shape": [
+    14848,
+    20
+  ]
+}

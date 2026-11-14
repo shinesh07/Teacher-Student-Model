@@ -1,0 +1,27 @@
+dimension,feature,feature_set,justification,mean_extraction_seconds_per_image,set_dimensions
+1,red,student,Direct RGB colour.,0.0012904027169510942,6
+2,green,student,Direct RGB colour.,0.0012904027169510942,6
+3,blue,student,Direct RGB colour.,0.0012904027169510942,6
+4,hue,student,Colour family independent of brightness.,0.0012904027169510942,6
+5,saturation,student,Colour purity cue.,0.0012904027169510942,6
+6,value,student,Brightness cue.,0.0012904027169510942,6
+1,red,teacher,Direct RGB colour.,0.008070571544127395,20
+2,green,teacher,Direct RGB colour.,0.008070571544127395,20
+3,blue,teacher,Direct RGB colour.,0.008070571544127395,20
+4,hue,teacher,Colour family independent of brightness.,0.008070571544127395,20
+5,saturation,teacher,Colour purity cue.,0.008070571544127395,20
+6,value,teacher,Brightness cue.,0.008070571544127395,20
+7,blurred_red_sigma1,teacher,Fine local colour context.,0.008070571544127395,20
+8,blurred_green_sigma1,teacher,Fine local colour context.,0.008070571544127395,20
+9,blurred_blue_sigma1,teacher,Fine local colour context.,0.008070571544127395,20
+10,blurred_red_sigma3,teacher,Broader local colour context.,0.008070571544127395,20
+11,blurred_green_sigma3,teacher,Broader local colour context.,0.008070571544127395,20
+12,blurred_blue_sigma3,teacher,Broader local colour context.,0.008070571544127395,20
+13,gray_mean_7,teacher,Fine local smoothness.,0.008070571544127395,20
+14,gray_std_7,teacher,Fine texture variation.,0.008070571544127395,20
+15,gray_mean_15,teacher,Coarse local smoothness.,0.008070571544127395,20
+16,gray_std_15,teacher,Coarse texture variation.,0.008070571544127395,20
+17,sobel_magnitude,teacher,Edge strength.,0.008070571544127395,20
+18,laplacian,teacher,Second-order texture/edge response.,0.008070571544127395,20
+19,row_position,teacher,Normalized vertical location.,0.008070571544127395,20
+20,column_position,teacher,Normalized horizontal location.,0.008070571544127395,20

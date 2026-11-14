@@ -1,0 +1,55 @@
+{
+  "checkpoint": "CP04_final_test",
+  "config_sha256": "2eef9cdf86eb58b7948cf94a9c2d16b89352479f37964d535200933c74adcd88",
+  "created_at_utc": "2026-11-09T08:52:27.062632+00:00",
+  "evidence": {
+    "bundle_sha256": "de00f5ee403d65a8336b66830ab4aff9e007edfdcc61b54468fd490da53c747d",
+    "frozen_manifest": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/frozen_selection.json",
+    "qualitative_figures": [
+      "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/qualitative_1_3015.png",
+      "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/qualitative_2_3095.png",
+      "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/qualitative_3_3.png",
+      "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/figures/qualitative_4_1058.png"
+    ],
+    "result_json": "/Users/shinesh/Documents/ChatGPT/ML_Lab_Teacher_Student_Model/results/tables/final_results.json",
+    "test_images": 58,
+    "test_pixels": 3801088,
+    "track_summary": [
+      {
+        "agreement": 0.8427537063072468,
+        "compression_ratio": 150.27679437564058,
+        "f1_student": 0.7576296875312551,
+        "iou_student": 0.609825975337217,
+        "retention_percent": 92.38603900494769,
+        "speedup": 2.1243490209580433,
+        "student": "hard_random_forest_to_random_forest",
+        "teacher": "teacher_random_forest",
+        "track": "supervised",
+        "z": 69.85082026536399
+      },
+      {
+        "agreement": 0.7327959784146013,
+        "compression_ratio": 4.969942783543457,
+        "f1_student": 0.6900019645110477,
+        "iou_student": 0.5267198467618364,
+        "retention_percent": 96.48555539740772,
+        "speedup": 3.662367327460543,
+        "student": "km_refined__reestimated_L",
+        "teacher": "km_teacher",
+        "track": "unsupervised",
+        "z": 62.46891174113632
+      }
+    ]
+  },
+  "runtime": {
+    "packages": {
+      "Pillow": "12.3.0",
+      "numpy": "2.5.1",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1"
+    },
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.3"
+  },
+  "status": "PASSED"
+}

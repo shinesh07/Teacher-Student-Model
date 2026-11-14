@@ -1,0 +1,17 @@
+# Raw data and fitted model binaries are reproducible but too large for Git.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+
+# Local execution state
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+tmp/
+
+# Local poster/report preview builds and editor output.
+*.pptx

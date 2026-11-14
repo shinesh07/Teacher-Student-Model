@@ -1,0 +1,64 @@
+{
+  "seed": 42,
+  "dataset": {
+    "slug": "faizalkarim/flood-area-segmentation",
+    "root": "data/raw",
+    "image_dir": "Image",
+    "mask_dir": "Mask",
+    "expected_image_count": 290,
+    "image_size": [256, 256],
+    "mask_positive_threshold": 128
+  },
+  "sampling": {
+    "labelled_pixels_per_image": 1250,
+    "teacher_knn_reference_pixels": 30000,
+    "student_knn_reference_pixels": 5000,
+    "transfer_pixels_per_image": 512,
+    "student_fit_pixels": 20000,
+    "kmeans_teacher_fit_pixels": 100000,
+    "kmeans_student_fit_pixels": 20000,
+    "validation_pixels_per_image": 512
+  },
+  "features": {
+    "student": ["red", "green", "blue", "hue", "saturation", "value"],
+    "teacher": [
+      "red", "green", "blue", "hue", "saturation", "value",
+      "blurred_red_sigma1", "blurred_green_sigma1", "blurred_blue_sigma1",
+      "blurred_red_sigma3", "blurred_green_sigma3", "blurred_blue_sigma3",
+      "gray_mean_7", "gray_std_7", "gray_mean_15", "gray_std_15",
+      "sobel_magnitude", "laplacian", "row_position", "column_position"
+    ]
+  },
+  "supervised": {
+    "teacher": {
+      "knn_neighbors": [15, 31],
+      "rf_trees": 200,
+      "rf_max_depth": [null, 16],
+      "gnb_var_smoothing": [1e-9, 1e-8]
+    },
+    "student": {
+      "knn_neighbors": [11, 21],
+      "rf_trees": 20,
+      "rf_max_depth": [6, 8],
+      "gnb_var_smoothing": [1e-9, 1e-8]
+    },
+    "decision_thresholds": [0.3, 0.4, 0.5, 0.6, 0.7],
+    "confidence_thresholds": [0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
+  },
+  "unsupervised": {
+    "teacher_clusters": [6, 8, 10],
+    "student_clusters": 2,
+    "teacher_n_init": 10,
+    "student_n_init": 10,
+    "batch_size": 4096
+  },
+  "execution": {
+    "prediction_chunk_pixels": 8192,
+    "timing_test_images": 58
+  },
+  "postprocessing": {
+    "mode": "none",
+    "median_size": 3,
+    "min_component_area": 0
+  }
+}

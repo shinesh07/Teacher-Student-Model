@@ -1,0 +1,39 @@
+{
+  "feature_timing": {
+    "images_extracted": 272,
+    "student_mean_seconds_per_image": 0.0012904027169510942,
+    "student_median_seconds_per_image": 0.0012826040001527872,
+    "teacher_mean_seconds_per_image": 0.008070571544127395,
+    "teacher_median_seconds_per_image": 0.00802268749976065
+  },
+  "student": [
+    "red",
+    "green",
+    "blue",
+    "hue",
+    "saturation",
+    "value"
+  ],
+  "teacher": [
+    "red",
+    "green",
+    "blue",
+    "hue",
+    "saturation",
+    "value",
+    "blurred_red_sigma1",
+    "blurred_green_sigma1",
+    "blurred_blue_sigma1",
+    "blurred_red_sigma3",
+    "blurred_green_sigma3",
+    "blurred_blue_sigma3",
+    "gray_mean_7",
+    "gray_std_7",
+    "gray_mean_15",
+    "gray_std_15",
+    "sobel_magnitude",
+    "laplacian",
+    "row_position",
+    "column_position"
+  ]
+}
