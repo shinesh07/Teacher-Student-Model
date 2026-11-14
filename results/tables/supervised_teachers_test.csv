@@ -1,4 +1,4 @@
-name,family,f1_percent,iou_percent,model_size_bytes,mean_segmentation_seconds_per_image,Model_Type
-teacher_knn,knn,77.74,63.58,8041349,2.981,Teacher (20 features)
-teacher_random_forest,random_forest,79.52,66.01,87680799,0.234,Teacher (20 features)
-teacher_gaussian_nb,gaussian_nb,72.35,56.68,882,0.013,Teacher (20 features)
+f1,f1_percent,family,feature_dimensions,feature_set,fit_pixels,fn,fp,group,iou,iou_percent,mean_feature_seconds_per_image,mean_segmentation_seconds_per_image,model_class,model_size_bytes,n_pixels,name,precision,precision_percent,recall,recall_percent,role,task,threshold,tn,tp,track
+0.7773806509986125,77.73806509986126,knn,20,teacher,30000,325971,322116,teacher,0.63583211866683,63.583211866683,0.009221979120787904,3.056005405172449,KNeighborsClassifier,8041349,3801088,teacher_knn,0.7784114243495931,77.84114243495931,0.7763526039401121,77.63526039401121,teacher,classification,0.6,2021450,1131551,supervised
+0.7952420900390014,79.52420900390014,random_forest,20,teacher,50000,344630,228462,teacher,0.6600845559625714,66.00845559625714,0.009266084724098117,0.24349146406892283,RandomForestClassifier,87680799,3801088,teacher_random_forest,0.8296780715605276,82.96780715605277,0.7635507388567719,76.3550738856772,teacher,classification,0.6,2115104,1112892,supervised
+0.7235342394272085,72.35342394272085,gaussian_nb,20,teacher,50000,219310,726943,teacher,0.5668262022966721,56.682620229667215,0.008962056051696608,0.013313334793126378,GaussianNB,882,3801088,teacher_gaussian_nb,0.6300836320799122,63.00836320799122,0.8495322883634003,84.95322883634003,teacher,classification,0.4,1616623,1238212,supervised

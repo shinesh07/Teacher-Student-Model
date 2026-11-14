@@ -1,3 +1,2 @@
-method,pair,tau_held_fixed,f1_percent,iou_percent,delta_vs_hard_pp
-Weighted Duplication (Soft),RF -> RF,0.5,75.07,60.09,-0.89
-Hard Pseudo-Labels (Selected),RF -> RF,0.5,75.76,60.98,0.0
+f1_change_percentage_points,hard_f1,hard_f1_percent,hard_iou,hard_iou_percent,iou_change_percentage_points,method,pair,soft_f1,soft_f1_percent,soft_iou,soft_iou_percent,student,tau_held_fixed,teacher
+-0.6927526204434264,0.7576296875312551,75.76296875312552,0.609825975337217,60.9825975337217,-0.8926703691868876,weighted duplication,random_forest_to_random_forest,0.7507021613268209,75.07021613268209,0.6008992716453482,60.08992716453482,random_forest,0.5,random_forest

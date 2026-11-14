@@ -1,8 +1,10 @@
-category,candidate,uses_teacher,test_f1_percent,test_iou_percent,delta_iou_vs_corresponding_base_percentage_points
-Supervised upper reference,Teacher Random Forest,upper reference,79.52,66.01,7.91
-No-teacher supervised base,Compact Random Forest,no,73.49,58.1,0.0
-Selected supervised transfer,Hard RF -> RF Student,yes,75.76,60.98,2.89
-Matched soft transfer,Soft RF -> RF Student,yes,75.07,60.09,1.99
-Unsupervised upper reference,K-Means Teacher (K=6),upper reference,70.63,54.59,1.96
-No-teacher K-Means base,Compact K-Means Base,no,68.96,52.63,0.0
-Selected K-Means transfer,KM Refined Student,yes,69.0,52.67,0.05
+candidate,category,delta_iou_vs_corresponding_base_percentage_points,note,selected_for_final,test_f1_percent,test_iou_percent,training_signal,uses_teacher
+Teacher Random Forest,Supervised upper reference,7.912391127833162,Accuracy reference; it is not a compact student.,False,79.52420900390014,66.00845559625714,L ground-truth masks; 20 rich features,upper reference
+Compact knn,No-teacher supervised base,0.0,Direct compact baseline for this student family.,False,72.96275466241585,57.43414419017607,L ground-truth masks only; no U pseudo-labels,no
+Compact random_forest,No-teacher supervised base,0.0,Direct compact baseline for this student family.,False,73.49463715464888,58.09606446842398,L ground-truth masks only; no U pseudo-labels,no
+Compact gaussian_nb,No-teacher supervised base,0.0,Direct compact baseline for this student family.,False,69.90834971968174,53.73776838793647,L ground-truth masks only; no U pseudo-labels,no
+Hard random_forest → random_forest,Selected supervised transfer,2.886533065297725,Selected on validation before test masks were opened.,True,75.76296875312552,60.9825975337217,teacher pseudo-labels on U images; 6-feature compact student,yes
+Soft random_forest → random_forest,Matched soft transfer,1.9938626961108374,Matched soft alternative at tau=0.5.,False,75.07021613268209,60.08992716453482,same teacher/U source budget as hard comparison,yes
+K-Means teacher K=6,Unsupervised upper reference,1.96455019095354,K selected by image-only silhouette.,False,70.62597660191544,54.590538924957855,L∪U image pixels; L masks only for cluster mapping,upper reference
+K-Means base (2 clusters),No-teacher K-Means base,0.0,Independent compact K-Means comparator.,False,68.96071785745556,52.625988734004316,L∪U image pixels; L masks only for compact cluster mapping,no
+K-Means refined / reestimated_L,Selected K-Means transfer,0.045995942179322125,Selected among teacher-initialized variants on validation only.,True,69.00019645110477,52.671984676183634,K=6 teacher cluster assignments plus L mapping,yes

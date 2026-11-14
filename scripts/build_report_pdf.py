@@ -700,10 +700,20 @@ def build_report() -> Path:
     for cmd in commands:
         story.append(p(f"<font name='Courier'>{cmd}</font>", styles["small"]))
     story += [
-        Spacer(1, 0.10 * inch),
+        Spacer(1, 0.08 * inch),
         p(
             "The supplied notebook presents these commands as separate checkpoints. "
             "Development can take several minutes. The final stage should only run after development creates the frozen selection manifest.",
+            styles["body"],
+        ),
+        Spacer(1, 0.12 * inch),
+        p("Appendix C  Interactive Colab Notebook & Code Link", styles["section"]),
+        p(
+            "The complete, self-contained, and reproducible execution notebook for this project is available on Google Colab at the following submission link:<br/>"
+            "<font color='#1a5fb4'><u><a href='https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing'>"
+            "https://colab.research.google.com/drive/1iHF4v76zfe51Y8BMfdamckK1QoQ1IAJB?usp=sharing"
+            "</a></u></font><br/>"
+            "This notebook runs end-to-end autonomously in a standard Google Colab environment. It automatically acquires the Kaggle dataset directly, establishes the deterministic split (RNG seed 42), computes 20D teacher and 6D student features, trains and evaluates knowledge distillation models across confidence thresholds τ ∈ [0.50, 0.95], and reproduces all verified final test metrics (75.76% F1, 60.98% IoU, +2.89 pp gain, 150.28× compression ratio over 3,801,088 pixels) with zero missing file dependencies.",
             styles["body"],
         ),
     ]
